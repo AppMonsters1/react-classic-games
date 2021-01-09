@@ -26,6 +26,7 @@ export default class MemorySquare extends Component {
       )
 
       return (
+        
         <button className={classes} onClick= {this.handleClick}>
          {(this.props.item.flipped || this.props.item.matched) ? <span>{this.props.item.value}</span>: <span> &#9824; </span>}
         </button>

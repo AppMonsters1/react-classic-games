@@ -7,6 +7,7 @@
     "@fortawesome/fontawesome": "^1.1.5",
     "@fortawesome/react-fontawesome": "0.0.17",
     "classnames": "^2.2.5",
+    "emailjs-com": "^2.6.4",
     "hoek": "^5.0.3",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",

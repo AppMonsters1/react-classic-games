@@ -71,6 +71,7 @@ export default class StoneScissorPaperGame extends Component {
 
         return (
             <div className="bodyContainer">
+                 {!sessionStorage.getItem('isUserLoggedIn')?  this.props.history.push('/react-classic-games/login'):null}
                 <h1 className="leftAlign">Stone Scissor Paper</h1>
                 <div>
                     <strong>Play this fun game of Stone, Scissor, Paper with the bot!</strong>

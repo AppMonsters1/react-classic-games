@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
       return (
         <div className="bodyContainer" >
-            <Jumbotron className="homeJumbotron">
+            <Jumbotron className="" style={{borderRadius:50,padding:20}}>
                 <h1>Welcome to GameStop!</h1>
                 <p>
                     This application demostrates the use of react-router-dom with some simple games.
@@ -15,7 +15,6 @@ class Home extends Component {
                     <br/><br/>
                     <Link to="/react-classic-games/login" className="btn btn-success"> 
                     <span className="glyphicon glyphicon-log-in"></span> Login</Link>
-                    <sub style={{color: 'navy'}}><b> *Hint:</b> Username: <b>user</b> & Password: <b>password</b></sub>
                 </p>
                 <p>
                 </p>

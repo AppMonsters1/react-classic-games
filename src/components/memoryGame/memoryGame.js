@@ -162,6 +162,7 @@ export default class MemoryGame extends Component {
       render() {
       return (
         <div className="bodyContainer">
+            
             <h1 className="leftAlign">Memory Game</h1>
             <center><b>Go ahead.. Find the matching cards in the least possible tries!</b></center>
             {this.state.gameComplete ? <div className="congrats"> Yayy you matched everything in {this.state.totalTry} tries! <br/>
