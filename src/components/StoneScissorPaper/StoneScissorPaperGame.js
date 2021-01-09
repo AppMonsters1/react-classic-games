@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
+//import classnames from 'classnames';
 
 export default class StoneScissorPaperGame extends Component {
     constructor(props) {
@@ -42,6 +42,7 @@ export default class StoneScissorPaperGame extends Component {
                         return true;
                     case "Paper":
                         return false;
+                    default: return false;
                 }
             case "Scissor":
                 switch (randVal) {
@@ -51,6 +52,8 @@ export default class StoneScissorPaperGame extends Component {
                         return null;
                     case "Paper":
                         return true;
+                    default: return false;
+
                 }
 
             case "Paper":
@@ -61,7 +64,8 @@ export default class StoneScissorPaperGame extends Component {
                         return false;
                     case "Paper":
                         return null;
-                }
+                        default: return false;
+                    }
             default:
                 return null;
         }
@@ -71,7 +75,7 @@ export default class StoneScissorPaperGame extends Component {
 
         return (
             <div className="bodyContainer">
-                 {!sessionStorage.getItem('isUserLoggedIn')?  this.props.history.push('/react-classic-games/login'):null}
+                 {!sessionStorage.getItem('isUserLoggedIn')?  this.props.history.push('/react-classic-games/login'):null}//
                 <h1 className="leftAlign">Stone Scissor Paper</h1>
                 <div>
                     <strong>Play this fun game of Stone, Scissor, Paper with the bot!</strong>

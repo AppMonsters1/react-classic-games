@@ -21,7 +21,7 @@ class Login extends Component {
         var _this = this;
         
         setTimeout(() => {
-            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var reg = "/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/";
             if (reg.test(_this.state.username) && _this.state.password.length>6){
                //send mail
                emailjs.send("service_epxpok8","template_214pnxm",{

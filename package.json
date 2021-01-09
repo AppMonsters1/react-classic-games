@@ -1,6 +1,6 @@
 {
   "name": "game-stop",
-  "homepage": "http://yasnaraj.github.io/react-classic-games",
+  "homepage": "http://AppMonsters1.github.io/react-classic-games",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,10 +11,15 @@
     "hoek": "^5.0.3",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.3.2",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"
   },
+  "browserslist": [
+    ">0.2%",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -24,6 +29,6 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.2.0"
   }
 }
