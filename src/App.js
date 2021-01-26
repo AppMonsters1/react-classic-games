@@ -10,7 +10,7 @@ class App extends Component {
         <Header />
         <Routes/>
         <footer>
-          <strong> Developed By: Yasna R. | {(new Date().getFullYear()).toString()}</strong>
+          <strong> Developed By:Shamith. | {(new Date().getFullYear()).toString()}</strong>
         </footer>
       </div>
     );
